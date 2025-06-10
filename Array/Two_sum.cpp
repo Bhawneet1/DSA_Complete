@@ -20,6 +20,7 @@ vector<int> Two_sum(vector<int> arr,int target )
     }
     return ans;
 }
+}
 int main()
 {
     vector<int> arr={ 2,7,11,15};
