@@ -5,17 +5,18 @@ vector<int> Two_sum(vector<int> arr,int target )
 
     int i=0;
     vector<int> ans;
-    int n=arr.size();
-    sort(arr.begin(),arr.end());//no sort as index changes on sorting therefore wrong answer
+    vector<int> arr2=arr;
+    int n=arr2.size();
+    sort(arr2.begin(),arr2.end());//no sort as index changes on sorting therefore wrong answer
     int j=n-1;
     while(i<=j)
     {
-        if(arr[i]+arr[j]<target) i++;
-        else if(arr[i]+arr[j]>target) j--;
+        if(arr2[i]+arr2[j]<target) i++;
+        else if(arr2[i]+arr2[j]>target) j--;
         else {
-            ans.push_back(arr[i]);
-            ans.push_back(arr[j]);
-        }
+            ans.push_back(i);
+            ans.push_back(j);
+            return ans;
     }
     return ans;
 }
