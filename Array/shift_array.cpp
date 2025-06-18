@@ -32,6 +32,20 @@ void rotate_array(int arr[],int n,int shift)
     {
         cout<<arr[i]<<" ";
     }
+    cout<<endl;
+}
+
+void rotate_array_2(int arr[],int n,int shift)
+{
+    shift=shift%n;
+    reverse(arr,arr+n);
+    reverse(arr,arr+shift);
+    reverse(arr+shift,arr+n);
+    for(int i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+
 }
 int main()
 {
@@ -39,5 +53,6 @@ int main()
     int n=6;
     int shift=2;
     rotate_array(arr,n,shift);
+    rotate_array_2(arr,n,shift);
     return 0;
 }
